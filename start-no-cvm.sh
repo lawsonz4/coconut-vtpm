@@ -62,6 +62,9 @@ stty intr ^]
 
 set -ex
 
+OVMF_IMAGE=./edk2/Build/OvmfX64/DEBUG_GCC/FV/OVMF.fd
+OVMF_VARS=./edk2/Build/OvmfX64/DEBUG_GCC/FV/OVMF_VARS.fd
+
 $SUDO_CMD \
   $QEMU \
     -machine q35,accel=kvm,memory-backend=mem0 \
@@ -70,8 +73,8 @@ $SUDO_CMD \
     -cpu max \
     -no-reboot \
     -netdev user,id=vmnic -device e1000,netdev=vmnic,romfile= \
-    -drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2/ovmf/OVMF_CODE.fd \
-    -drive if=pflash,format=raw,file=/usr/share/edk2/ovmf/OVMF_VARS.fd \
+    -drive if=pflash,format=raw,readonly=on,file=${OVMF_IMAGE} \
+    -drive if=pflash,format=raw,file=${OVMF_VARS} \
     -drive file=$IMAGE,if=none,id=disk0,format=qcow2,snapshot=off \
     -device virtio-scsi-pci,id=scsi0,disable-legacy=on \
     -device scsi-hd,drive=disk0,bootindex=0 \

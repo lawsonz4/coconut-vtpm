@@ -8,3 +8,5 @@ install/*
 kbs/kbs.pid
 kbs/kbs.measurement
 kbs/kbs.secret
+cvm-imgs/
+.vscode/

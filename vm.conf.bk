@@ -4,12 +4,12 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 QEMU="${SCRIPT_PATH}/qemu/build/qemu-system-x86_64"
 QEMU_IMG="${SCRIPT_PATH}/qemu/build/qemu-img"
-QEMU_MONITOR_PORT="56017"
+QEMU_MONITOR_PORT="56018"
 
 # CVM parameters
 IGVM="${SCRIPT_PATH}/svsm/bin/coconut-qemu.igvm"
-CVM_IMAGE="${SCRIPT_PATH}/cvm-imgs/v2-20260626/vtpm-disk-resized.qcow2"
-TPM_STATE="${SCRIPT_PATH}/cvm-imgs/v2-20260626/vtpm-state.raw"
+CVM_IMAGE="/home/lawson/data/root/sev-CCC/coconut-vtpm/cvm-imgs/v0-old/vtpm-disk.qcow2"
+TPM_STATE="/home/lawson/data/root/sev-CCC/coconut-vtpm/cvm-imgs/vo-old/vtpm-state.raw"
 CVM_LUKS_PASSPHRASE="MY-LUKS-PASSPHRASE"
 
 # Guest image configuration

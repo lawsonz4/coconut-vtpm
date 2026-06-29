@@ -58,6 +58,7 @@ popd
 pushd "${SCRIPT_PATH}/qemu"
 if [ ! -d "./build" ]; then
     PKG_CONFIG_PATH=${SCRIPT_PATH}/install/lib64/pkgconfig ./configure \
+	--firmwarepath=/usr/share/qemu:/usr/share/seabios:/usr/share/ipxe \
         --disable-docs --disable-user --target-list=x86_64-softmmu \
         --disable-libnfs \
         --enable-slirp \

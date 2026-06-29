@@ -1,5 +1,5 @@
 #!/bin/bash
-
+reset
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Load VM configuration
@@ -41,4 +41,5 @@ ${SCRIPT_PATH}/svsm/scripts/launch_guest.sh --qemu "${QEMU}" \
     --aproxy "${PROXY_SOCK}" \
     --state "${TPM_STATE}" \
     --monitor "${QEMU_MONITOR_PORT}" \
+    -i "${IGVM}" \
     ${IMAGE}
