@@ -1,5 +1,7 @@
 #!/bin/bash
 reset
+unset http_proxy
+unset https_proxy
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Load VM configuration
