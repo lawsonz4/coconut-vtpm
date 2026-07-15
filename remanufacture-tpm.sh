@@ -3,7 +3,7 @@
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Load VM configuration
-source "${SCRIPT_PATH}/vm.conf"
+source "${SCRIPT_PATH}/cvm0.conf"
 
 function usage
 {
