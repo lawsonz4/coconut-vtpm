@@ -2,10 +2,11 @@
 reset
 unset http_proxy
 unset https_proxy
-SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+cd ../
+REPO_ROOT="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-# Load VM configuration
-source "${SCRIPT_PATH}/cvm2.conf"
+# Load VM configuration (cvm0.conf sets SCRIPT_PATH to its own directory)
+source "${REPO_ROOT}/lawson-scripts/cvm0.conf"
 
 IMAGE="--image ${CVM_IMAGE}"
 
@@ -39,7 +40,7 @@ done
 
 set -ex
 
-${SCRIPT_PATH}/svsm/scripts/launch_guest.sh --qemu "${QEMU}" \
+${REPO_ROOT}/svsm/scripts/launch_guest.sh --qemu "${QEMU}" \
     --aproxy "${PROXY_SOCK}" \
     --state "${TPM_STATE}" \
     --monitor "${QEMU_MONITOR_PORT}" \

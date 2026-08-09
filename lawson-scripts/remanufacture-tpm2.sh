@@ -3,7 +3,7 @@
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Load VM configuration
-source "${SCRIPT_PATH}/cvm0.conf"
+source "${SCRIPT_PATH}/cvm2.conf"
 
 function usage
 {
@@ -45,7 +45,7 @@ set -ex
 echo "Starting a CVM without a disk to re-manufacture the vTPM"
 rm -f ${TPM_STATE}; truncate -s16M ${TPM_STATE}
 
-LOG_FILE=remanufacture-tpm.log
+LOG_FILE=log2-rem.log
 truncate -s0 ${LOG_FILE}
 
 # launch_guest.sh uses stty, so let's use script to create a terminal session
