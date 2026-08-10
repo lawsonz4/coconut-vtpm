@@ -1,1 +1,1 @@
-/home/lawson/data/root/sev-CCC/coconut-vtpm/remanufacture-tpm2.sh
+/home/lawson/data/root/sev-CCC/coconut-vtpm/lawson-scripts/remanufacture-tpm2.sh

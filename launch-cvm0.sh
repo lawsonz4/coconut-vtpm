@@ -2,6 +2,7 @@
 reset
 unset http_proxy
 unset https_proxy
+unset all_proxy
 cd ../
 REPO_ROOT="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 

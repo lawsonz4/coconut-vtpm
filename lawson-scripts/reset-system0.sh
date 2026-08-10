@@ -7,4 +7,4 @@
 #    echo "已删除 (文件不存在，无需操作): $TMC_PATH"
 #fi
 
-/home/lawson/data/root/sev-CCC/coconut-vtpm/remanufacture-tpm0.sh
+/home/lawson/data/root/sev-CCC/coconut-vtpm/lawson-scripts/remanufacture-tpm0.sh
